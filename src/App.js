@@ -42,9 +42,8 @@ class App extends Component {
 					<Route path="/movies" render={props => <Movies {...props} user={user} />} />
 					<Route path="/customers" component={Customers} />
 					<Route path="/rentals" component={Rentals} />
-					<Route path="/not-found" component={NotFound} />
 					<Redirect from="/" exact to="/movies" />
-					<Redirect from="/movies" exact to="/movies" />
+					<Route path="/not-found" component={NotFound} />
 					<Redirect to="/not-found" />
 				</Switch>
 			</main>
